@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ᏢᎯᏰᏞᏫ | Profile</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { height: 100vh; display: flex; align-items: center; justify-content: center; background-color: #000; font-family: sans-serif; overflow: hidden; }
+
+        /* الفيديو في الخلفية - يشتغل تلقائياً */
+        .v-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; }
+        video { width: 100%; height: 100%; object-fit: cover; }
+        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.45); z-index: -1; }
+
+        /* البطاقة - رجعت الأيقونات والاسم الصغير */
+        .card {
+            background: rgba(10, 10, 10, 0.85); border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px; padding: 25px 15px; text-align: center; width: 260px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.8);
+            animation: fadeIn 1s ease-in;
+        }
+
+        .profile-img { width: 85px; height: 85px; border-radius: 50%; border: 1.5px solid #fff; margin: 0 auto 12px auto; object-fit: cover; }
+
+        /* الاسم صغير وفخم (Glow Effect) */
+        h1 { color: #fff; font-size: 22px; letter-spacing: 2px; text-transform: uppercase; animation: shine 3s infinite alternate; }
+        @keyframes shine { from { opacity: 0.8; } to { text-shadow: 0 0 10px #fff; opacity: 1; } }
+        
+        .sub { color: #777; font-size: 9px; letter-spacing: 2px; margin-bottom: 20px; display: block; margin-top: 5px; }
+
+        /* الأزرار والأيقونات */
+        .links a {
+            display: flex; align-items: center; justify-content: center;
+            background: rgba(255, 255, 255, 0.05); color: #fff; text-decoration: none;
+            padding: 12px; margin: 8px 0; border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.1);
+            font-weight: bold; font-size: 13px; transition: 0.3s;
+        }
+        .links a img { width: 18px; margin-right: 10px; filter: brightness(2); }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+
+    <div class="v-bg">
+        <video autoplay muted loop playsinline>
+            <source src="https://f.top4top.io/m_37384wbbp0.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="overlay"></div>
+
+    <audio id="m" loop>
+        <source src="https://k.top4top.io/m_37389748i0.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="card" onclick="document.getElementById('m').play();">
+        <img src="https://f.top4top.io/p_37386gqbl0.png" class="profile-img">
+        <h1>ᏢᎯᏰᏞᏫ</h1>
+        <span class="sub">DIGITAL CREATOR</span>
+
+        <div class="links">
+            <a href="https://www.instagram.com/s22_07s?igsh=MW1ibjR2bWZmaHZ4dA==" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png"> Instagram
+            </a>
+            <a href="https://www.tiktok.com/@rambo.studio22?_r=1&_t=ZS-952WXDdRePl" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" style="filter: invert(1);"> TikTok
+            </a>
+            <a href="https://discord.gg/fBGHusbxC8" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png"> Discord
+            </a>
+        </div>
+        <p style="color: #444; font-size: 8px; margin-top: 10px;">TAP TO PLAY MUSIC 🎵</p>
+    </div>
+
+</body>
+</html>
